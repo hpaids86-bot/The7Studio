@@ -5,12 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | The7Studio - Memorable Events</title>
-    <meta name="description"
-        content="Learn more about The7Studio, a professional photography and cinematography studio in Tiruppur.">
+    <meta name="description" content="Learn more about The7Studio, a professional photography and cinematography studio in Tiruppur.">
     <link rel="stylesheet" href="css/style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
@@ -39,7 +36,6 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html" class="active">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="booking.html">Booking</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -55,35 +51,51 @@
         <div class="container">
             <h1>About The7Studio</h1>
             <p>Every Picture Tells a Story</p>
-            <div style="margin-top: 15px;">
-                <div class="luxury-promo-banner">
-                    <div class="luxury-promo-content">
-                        <span class="luxury-gift-icon">🎁</span>
-                        <span class="luxury-promo-text">FREE Pre-Wedding Shoot with Every Event!</span>
-                    </div>
-                    <div class="luxury-gold-line"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT CONTENT -->
+    <section class="about-page">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; align-items: center;">
+                <div>
+                    <img src="file:///C:/Users/hpaid/.gemini/antigravity-ide/brain/cc418172-b5ca-4823-9544-8b27eddb9909/media__1785938926223.jpg" alt="The7Studio Recent Shoot" style="border-radius: 10px; border: 2px solid var(--accent-gold);">
+                </div>
+                <div>
+                    <h2>Who We Are</h2>
+                    <p>Welcome to <strong>The7Studio</strong>, your trusted photography and cinematography studio located in Tiruppur, Tamil Nadu.</p>
+                    <p>We specialize in capturing unforgettable memories with creativity, passion, and high-definition visual storytelling.</p>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT CONTENT -->
-    <section class="about-page" style="padding: 4rem 5%;">
-        <div class="container">
-            <div class="responsive-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; align-items: center;">
-                <div class="video-showcase-wrapper" style="position: relative; border-radius: 14px; overflow: hidden; border: 2px solid var(--accent-gold); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7); background: #000; height: 380px;">
-                    <video id="about-studio-video" autoplay loop muted playsinline
-                        style="width: 100%; height: 100%; object-fit: cover; object-position: 25% 15%; transform: scale(1.3); display: block;">
-                        <source src="C:\Users\hpaid\Downloads\70632.mp4" type="video/mp4">
-                        <source src="videos/70632.mp4" type="video/mp4">
-                    </video>
+    <!-- RECENT WORKS PREVIEW -->
+    <section class="recent-works" style="background: var(--bg-secondary); padding: 4rem 5%;">
+        <div class="container" style="padding:0;">
+            <h2>Our Recent Work Highlights</h2>
+            <div class="recent-works-grid">
+                <div class="recent-work-card">
+                    <img src="file:///C:/Users/hpaid/.gemini/antigravity-ide/brain/cc418172-b5ca-4823-9544-8b27eddb9909/media__1785938921720.jpg" alt="Couple Wall Embrace">
+                    <div class="card-info">
+                        <h4>Pre-Wedding Saree Shoot</h4>
+                        <p>Traditional Couple Shoot</p>
+                    </div>
                 </div>
-                <div>
-                    <h2>Who We Are</h2>
-                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 15px;">Welcome to <strong>The7Studio</strong>, your trusted photography and cinematography studio
-                        located in Tiruppur, Tamil Nadu.</p>
-                    <p style="font-size: 1.05rem; line-height: 1.8; color: #ccc;">We specialize in capturing unforgettable memories with creativity, passion, and high-definition
-                        visual storytelling.</p>
+                <div class="recent-work-card">
+                    <img src="file:///C:/Users/hpaid/.gemini/antigravity-ide/brain/cc418172-b5ca-4823-9544-8b27eddb9909/media__1785938924693.jpg" alt="Smiling Portrait">
+                    <div class="card-info">
+                        <h4>Candid Smile</h4>
+                        <p>Golden Hour Moments</p>
+                    </div>
+                </div>
+                <div class="recent-work-card">
+                    <img src="file:///C:/Users/hpaid/.gemini/antigravity-ide/brain/cc418172-b5ca-4823-9544-8b27eddb9909/media__1785938925434.jpg" alt="Doorway Shot">
+                    <div class="card-info">
+                        <h4>Rustic Doorway Session</h4>
+                        <p>Ethnic Pre-Wedding Shoot</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -94,32 +106,17 @@
         <div class="container">
             <h2>Studio Information</h2>
             <table class="info-table">
-                <tr>
-                    <td><strong>Studio Name</strong></td>
-                    <td>The7Studio</td>
-                </tr>
-                <tr>
-                    <td><strong>Tagline</strong></td>
-                    <td>Memorable Events</td>
-                </tr>
+                <tr><td><strong>Studio Name</strong></td><td>The7Studio</td></tr>
+                <tr><td><strong>Tagline</strong></td><td>Memorable Events</td></tr>
 
-                <tr>
-                    <td><strong>Location</strong></td>
-                    <td>Balamurugan Nagar, 3rd Street, Kumar Nagar, Valayankadu South, Tiruppur - 641603</td>
-                </tr>
-                <tr>
-                    <td><strong>Phone</strong></td>
-                    <td>+91 97903 01168</td>
-                </tr>
-                <tr>
-                    <td><strong>Email</strong></td>
-                    <td>the7studioo@gmail.com</td>
-                </tr>
+                <tr><td><strong>Location</strong></td><td>Balamurugan Nagar, 3rd Street, Kumar Nagar, Valayankadu South, Tiruppur - 641603</td></tr>
+                <tr><td><strong>Phone</strong></td><td>+91 97903 01168</td></tr>
+                <tr><td><strong>Email</strong></td><td>the7studioo@gmail.com</td></tr>
             </table>
         </div>
     </section>
 
-    <!-- FOOTER & MAP -->
+    <!-- FOOTER -->
     <footer>
         <div class="footer-container">
             <div>
@@ -140,30 +137,10 @@
                 <p><a href="https://wa.me/919790301168" target="_blank">WhatsApp</a></p>
             </div>
         </div>
-
-
-        <hr style="margin-top: 30px;">
+        <hr>
         <p style="text-align:center;padding:20px;">© 2026 The7Studio. All Rights Reserved.</p>
     </footer>
 
-    <!-- Global Floating Action Suite -->
-    <div class="floating-actions-left">
-        <a href="https://wa.me/919790301168?text=Hi%20The7Studio,%20I'd%20like%20to%20inquire%20about%20your%20photography%20services." 
-           target="_blank" class="floating-whatsapp-btn" title="Chat on WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-    </div>
-
-    <div class="floating-actions-right">
-        <a href="tel:+919790301168" class="floating-action-btn" title="Call Us">
-            <i class="fa-solid fa-phone"></i>
-        </a>
-        <button id="back-to-top" class="floating-action-btn" title="Back to Top" style="display: none;">
-            <i class="fa-solid fa-chevron-up"></i>
-        </button>
-    </div>
-
     <script src="js/script.js"></script>
 </body>
-
 </html>
