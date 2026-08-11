@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Your Shoot | The7Studio - Memorable Events</title>
     <meta name="description" content="Book photography and videography session with The7Studio Tiruppur.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <link rel="shortcut icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/logo.svg">
     <link rel="stylesheet" href="css/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
@@ -36,6 +40,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="booking.html" class="active">Booking</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -48,93 +53,167 @@
 
     <!-- PAGE HEADER -->
     <section class="page-banner">
-        <div class="container">
+        <div class="container" style="text-align: center;">
             <h1>Book Your Session</h1>
-            <h2>Create Your Memories To Be A Emotion</h2>
-
+            <h2>Create Your Memories To Be An Emotion</h2>
+            <div style="margin-top: 10px;">
+                <div class="luxury-promo-banner">
+                    <div class="luxury-promo-content">
+                        <span class="luxury-gift-icon">🎁</span>
+                        <span class="luxury-promo-text">FREE Pre-Wedding Shoot with Every Wedding Event!</span>
+                    </div>
+                    <div class="luxury-gold-line"></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- BOOKING FORM SECTION -->
-    <section class="booking-page">
-        <div class="container" style="max-width: 850px;">
+    <!-- BOOKING FORM & STUDIO INFO SECTION -->
+    <section class="booking-page" style="padding: 2rem 4% 4rem; background: var(--bg-primary);">
+        <div style="width: 100%; max-width: 1500px; margin: 0 auto;">
+            <div class="booking-wrapper-grid">
+                
+                <!-- Studio Highlights & Guarantee Card -->
+                <div class="booking-info-card" style="background: var(--bg-card); padding: 40px; border-radius: 16px; border: 1px solid var(--border-gold); box-shadow: 0 15px 35px rgba(0,0,0,0.6);">
+                    <h3 style="color: var(--accent-gold); font-size: 1.8rem; margin-bottom: 15px; font-family: 'Cormorant Garamond', serif;">Why Book With The7Studio?</h3>
+                    <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.7; margin-bottom: 30px;">
+                        We capture your most cherished moments with high-definition visual storytelling, passion, and artistic perfection across Tiruppur & Tamil Nadu.
+                    </p>
 
+                    <div style="display: flex; flex-direction: column; gap: 22px;">
+                        <div style="display: flex; gap: 15px; align-items: flex-start;">
+                            <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(230, 198, 135, 0.12); border: 1px solid var(--accent-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent-gold); font-size: 1.2rem;">
+                                🎁
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 4px;">Free Pre-Wedding Shoot</h4>
+                                <p style="color: #aaa; font-size: 0.92rem; margin: 0;">Included complimentary with every booked event package.</p>
+                            </div>
+                        </div>
 
-            <form onsubmit="handleWhatsAppFormSubmission(event, 'booking')"
-                style="background: var(--bg-card); padding: 40px; border-radius: 8px; border: 1px solid var(--border-gold);">
-                <div class="responsive-grid">
-                    <div>
-                        <label style="display:block; margin-bottom: 8px; color: var(--accent-gold);">Your Name</label>
-                        <input type="text" name="name" placeholder="Enter Full Name" required
-                             style="width:100%; padding: 12px; background: var(--bg-primary); border: 1px solid var(--border-light); color: #fff; border-radius: 4px;">
-                    </div>
-                    <div>
-                        <label style="display:block; margin-bottom: 8px; color: var(--accent-gold);">Phone
-                            Number</label>
-                        <input type="tel" name="phone" placeholder="+91 97903 01168" required
-                            style="width:100%; padding: 12px; background: var(--bg-primary); border: 1px solid var(--border-light); color: #fff; border-radius: 4px;">
-                    </div>
-                </div>
+                        <div style="display: flex; gap: 15px; align-items: flex-start;">
+                            <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(230, 198, 135, 0.12); border: 1px solid var(--accent-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent-gold); font-size: 1.1rem;">
+                                <i class="fa-solid fa-camera-retro"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 4px;">4K Cinema & Aerial Drones</h4>
+                                <p style="color: #aaa; font-size: 0.92rem; margin: 0;">State-of-the-art camera gear & drone coverage for every occasion.</p>
+                            </div>
+                        </div>
 
+                        <div style="display: flex; gap: 15px; align-items: flex-start;">
+                            <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(230, 198, 135, 0.12); border: 1px solid var(--accent-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent-gold); font-size: 1.1rem;">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 4px;">Timely Delivery Guarantee</h4>
+                                <p style="color: #aaa; font-size: 0.92rem; margin: 0;">Professionally color-graded photos & films delivered on schedule.</p>
+                            </div>
+                        </div>
 
-                <div class="responsive-grid">
-                    <div>
-                        <label style="display:block; margin-bottom: 8px; color: var(--accent-gold);">Services</label>
-                        <select name="services"
-                            style="width:100%; padding: 12px; background: var(--bg-primary); border: 1px solid var(--border-light); color: #fff; border-radius: 4px;">
-                            <option>Traditional Photography</option>
-                            <option>Traditional Video</option>
-                            <option>Candid Photography</option>
-                            <option>Candid Video</option>
-                            <option>Drone Shoot</option>
-                            <option>360* Degree Video Wedding</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label style="display:block; margin-bottom: 8px; color: var(--accent-gold);">Event
-                            Type</label>
-                        <select name="service"
-                            style="width:100%; padding: 12px; background: var(--bg-primary); border: 1px solid var(--border-light); color: #fff; border-radius: 4px;">
-                            <option>Wedding Shoots </option>
-                            <option>360* Degree Video Wedding</option>
-                            <option>Baby Shoots</option>
-                            <option>Maternity Shoot</option>
-                            <option>Birthday Shoot</option>
-                            <option>Colloge Events</option>
-                            <option>Content Creation</option>
-                            <option>Product Shoots</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label style="display:block; margin-bottom: 8px; color: var(--accent-gold);">Event Date</label>
-                        <input type="date" name="date" required
-                            style="width:100%; padding: 12px; background: var(--bg-primary); border: 1px solid var(--border-light); color: #fff; border-radius: 4px;">
+                        <div style="display: flex; gap: 15px; align-items: flex-start;">
+                            <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(230, 198, 135, 0.12); border: 1px solid var(--accent-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent-gold); font-size: 1.1rem;">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 4px;">Direct Studio Line</h4>
+                                <p style="color: #aaa; font-size: 0.92rem; margin: 0;">+91 97903 01168 · Valayankadu South, Tiruppur</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Booking Form Card -->
+                <form onsubmit="handleWhatsAppFormSubmission(event, 'booking')"
+                    style="background: var(--bg-card); padding: 45px 40px; border-radius: 16px; border: 1px solid var(--border-gold); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);">
+                    
+                    <div class="responsive-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 20px;">
+                        <div>
+                            <label style="display:block; margin-bottom: 8px; color: var(--accent-gold); font-size: 1.05rem; font-weight: 600;">Your Name</label>
+                            <input type="text" name="name" placeholder="Enter Full Name" required
+                                style="width:100%; padding: 14px 18px; font-size: 1rem; background: var(--bg-primary); border: 1px solid var(--border-light); color: #fff; border-radius: 8px;">
+                        </div>
+                        <div>
+                            <label style="display:block; margin-bottom: 8px; color: var(--accent-gold); font-size: 1.05rem; font-weight: 600;">Phone Number</label>
+                            <input type="tel" name="phone" placeholder="+91 97903 01168" required
+                                style="width:100%; padding: 14px 18px; font-size: 1rem; background: var(--bg-primary); border: 1px solid var(--border-light); color: #fff; border-radius: 8px;">
+                        </div>
+                    </div>
 
+                    <div class="responsive-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 20px;">
+                        <div>
+                            <label style="display:block; margin-bottom: 8px; color: var(--accent-gold); font-size: 1.05rem; font-weight: 600;">Event Type</label>
+                            <select name="service"
+                                style="width:100%; padding: 14px 18px; font-size: 1rem; background: var(--bg-primary); border: 1px solid var(--border-light); color: #fff; border-radius: 8px;">
+                                <option>Wedding Shoots</option>
+                                <option>360* Degree Video Wedding</option>
+                                <option>Baby Shoots</option>
+                                <option>Maternity Shoot</option>
+                                <option>Birthday Shoot</option>
+                                <option>College Events</option>
+                                <option>Content Creation</option>
+                                <option>Product Shoots</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display:block; margin-bottom: 8px; color: var(--accent-gold); font-size: 1.05rem; font-weight: 600;">Event Date</label>
+                            <input type="date" name="date" required
+                                style="width:100%; padding: 14px 18px; font-size: 1rem; background: var(--bg-primary); border: 1px solid var(--border-light); color: #fff; border-radius: 8px;">
+                        </div>
+                    </div>
 
-                <div style="margin-bottom: 25px;">
-                    <label style="display:block; margin-bottom: 8px; color: var(--accent-gold);">Event Location /
-                        Special Requests</label>
-                    <textarea name="details" rows="4" placeholder="Mention venue location in Tiruppur or Tamil Nadu..."
-                        style="width:100%; padding: 12px; background: var(--bg-primary); border: 1px solid var(--border-light); color: #fff; border-radius: 4px;"></textarea>
-                </div>
+                    <div style="margin-bottom: 25px;">
+                        <label style="display:block; margin-bottom: 10px; color: var(--accent-gold); font-size: 1.05rem; font-weight: 600;">Select Services (Multiple Selection)</label>
+                        <div class="services-checkbox-group">
+                            <label class="service-chip">
+                                <input type="checkbox" name="services" value="Traditional Photography">
+                                <span>Traditional Photography</span>
+                            </label>
+                            <label class="service-chip">
+                                <input type="checkbox" name="services" value="Traditional Video">
+                                <span>Traditional Video</span>
+                            </label>
+                            <label class="service-chip">
+                                <input type="checkbox" name="services" value="Candid Photography">
+                                <span>Candid Photography</span>
+                            </label>
+                            <label class="service-chip">
+                                <input type="checkbox" name="services" value="Candid Video">
+                                <span>Candid Video</span>
+                            </label>
+                            <label class="service-chip">
+                                <input type="checkbox" name="services" value="Drone Shoot">
+                                <span>Drone Shoot</span>
+                            </label>
+                            <label class="service-chip">
+                                <input type="checkbox" name="services" value="360* Degree Video Wedding">
+                                <span>360* Degree Video Wedding</span>
+                            </label>
+                        </div>
+                    </div>
 
-                <button type="submit" class="btn" style="width: 100%;"><i class="fa-solid fa-paper-plane"></i> Submit
-                    Booking</button>
-            </form>
+                    <div style="margin-bottom: 25px;">
+                        <label style="display:block; margin-bottom: 8px; color: var(--accent-gold); font-size: 1.05rem; font-weight: 600;">Event Location / Special Requests</label>
+                        <textarea name="details" rows="4" placeholder="Mention venue location in Tiruppur or Tamil Nadu..."
+                            style="width:100%; padding: 14px 18px; font-size: 1rem; background: var(--bg-primary); border: 1px solid var(--border-light); color: #fff; border-radius: 8px;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%; padding: 16px; font-size: 1.15rem; font-weight: 700; border-radius: 8px; letter-spacing: 1px;">
+                        <i class="fa-solid fa-paper-plane"></i> SUBMIT BOOKING
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER & MAP -->
     <footer>
         <div class="footer-container">
             <div>
                 <h2>The7Studio</h2>
                 <p>Memorable Events</p>
-                <p style="color: var(--accent-gold); font-weight: 600;">🎁 FREE Pre-Wedding Shoot with Every Event!</p>
+                <p style="color: var(--accent-gold); font-weight: 600;">🎁 FREE Pre-Wedding Shoot with Every Wedding Event!</p>
             </div>
             <div>
                 <h3>Contact</h3>
@@ -149,11 +228,29 @@
                 <p><a href="https://wa.me/919790301168" target="_blank">WhatsApp</a></p>
             </div>
         </div>
-        <hr>
+
+
+        <hr style="margin-top: 30px;">
         <p style="text-align:center;padding:20px;">© 2026 The7Studio. All Rights Reserved.</p>
     </footer>
 
+    <!-- Global Floating Action Suite -->
+    <div class="floating-actions-left">
+        <a href="https://wa.me/919790301168?text=Hi%20The7Studio,%20I'd%20like%20to%20inquire%20about%20your%20photography%20services." 
+           target="_blank" class="floating-whatsapp-btn" title="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <div class="floating-actions-right">
+        <a href="tel:+919790301168" class="floating-action-btn" title="Call Us">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <button id="back-to-top" class="floating-action-btn" title="Back to Top" style="display: none;">
+            <i class="fa-solid fa-chevron-up"></i>
+        </button>
+    </div>
+
     <script src="js/script.js"></script>
 </body>
-
 </html>

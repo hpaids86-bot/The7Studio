@@ -5,42 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio & Video Gallery | The7Studio Tiruppur</title>
-    <meta name="description" content="Explore the official photography portfolio and cinematic video reels of The7Studio Tiruppur. Wedding shoots, baby shower, maternity, traditional ceremonies, and commercial films.">
+    <meta name="description"
+        content="Explore the official photography portfolio and cinematic video reels of The7Studio Tiruppur. Wedding shoots, baby shower, maternity, traditional ceremonies, and commercial films.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <link rel="shortcut icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/logo.svg">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <!-- HEADER & NAVIGATION -->
     <header>
         <div class="top-offer-bar">
-            <span>🎁 Special Offer: FREE Pre-Wedding Shoot Included with Every Event Booking!</span>
+            <span>🎁 Special Offer: FREE Pre-Wedding Shoot Included with Every Wedding Event!</span>
         </div>
         <nav>
             <div class="logo">
                 <a href="index.html" style="text-decoration:none; color:inherit;">
                     <h2>The7Studio</h2>
-                    <span>MEMORABLE MOMENTS</span>
+                    <p style="font-size:0.8rem; letter-spacing:2px; color:var(--accent-gold); margin:0;">MEMORABLE
+                        EVENTS</p>
                 </a>
             </div>
-            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <div class="nav-menu">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="gallery.html" class="active">Gallery</a></li>
-                    <li><a href="booking.html">Booking</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="nav-actions">
-                    <a href="booking.html" class="btn">Book Now</a>
-                </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="booking.html">Booking</a>
+                <a href="contact.html">Contact</a>
             </div>
         </nav>
     </header>
@@ -48,13 +46,13 @@
     <!-- PAGE HEADER -->
     <section class="page-banner">
         <div class="container" style="text-align: center;">
-            <h1>Portfolio & Video Gallery</h1>
+            <h1>Our Works</h1>
             <h2>Capturing Emotions Across Tiruppur & Tamil Nadu</h2>
             <div style="margin-top: 10px;">
                 <div class="luxury-promo-banner">
                     <div class="luxury-promo-content">
                         <span class="luxury-gift-icon">🎁</span>
-                        <span class="luxury-promo-text">FREE Pre-Wedding Shoot with Every Event!</span>
+                        <span class="luxury-promo-text">FREE Pre-Wedding Shoot with Every Wedding Event!</span>
                     </div>
                     <div class="luxury-gold-line"></div>
                 </div>
@@ -65,92 +63,142 @@
     <!-- GALLERY SECTION -->
     <section class="gallery-page" style="padding: 3rem 5% 5rem;">
         <div class="container" style="max-width: 1400px; width: 100%;">
-            
-            <!-- Filter Category Buttons -->
-            <div class="portfolio-filter-container" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-bottom: 40px;">
-                <button class="filter-btn active" data-filter="all">All Works</button>
-                <button class="filter-btn" data-filter="wedding">Weddings</button>
-                <button class="filter-btn" data-filter="baby">Baby & Maternity</button>
-                <button class="filter-btn" data-filter="puberty">Traditional</button>
-                <button class="filter-btn" data-filter="corporate">Commercial</button>
-                <button class="filter-btn video-filter-btn" data-filter="video"><i class="fa-solid fa-play" style="margin-right: 6px;"></i> Videos & Reels</button>
-            </div>
 
             <!-- Full Gallery Grid -->
-            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px;">
-                
+            <div class="gallery-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px;">
+
                 <!-- Photos -->
                 <div class="recent-work-card portfolio-item" data-category="wedding">
-                    <img src="C:\Users\hpaid\Pictures\The7.Studio\024A6670.jpg" alt="Wedding Shoot 1">
+                    <img src="images/wedding/wedding-01.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/024A6670.jpg';" alt="Wedding Shoot 1">
                     <div class="work-overlay"><span>Wedding Shoot</span></div>
                 </div>
 
                 <div class="recent-work-card portfolio-item" data-category="wedding">
-                    <img src="C:\Users\hpaid\Pictures\The7.Studio\024A6805.jpg" alt="Wedding Shoot 2">
+                    <img src="images/wedding/wedding-02.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/024A6805.jpg';" alt="Wedding Shoot 2">
                     <div class="work-overlay"><span>Cinematic Wedding</span></div>
                 </div>
 
                 <div class="recent-work-card portfolio-item" data-category="wedding">
-                    <img src="C:\Users\hpaid\Pictures\The7.Studio\024A6835.jpg" alt="Wedding Shoot 3">
+                    <img src="images/wedding/wedding-03.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/024A6835.jpg';" alt="Wedding Shoot 3">
                     <div class="work-overlay"><span>Candid Couple</span></div>
                 </div>
 
                 <div class="recent-work-card portfolio-item" data-category="wedding">
-                    <img src="C:\Users\hpaid\Pictures\The7.Studio\024A6846.jpg" alt="Wedding Shoot 4">
+                    <img src="images/wedding/wedding-04.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/024A6846.jpg';" alt="Wedding Shoot 4">
                     <div class="work-overlay"><span>Pre-Wedding Memory</span></div>
                 </div>
 
                 <div class="recent-work-card portfolio-item" data-category="puberty">
-                    <img src="C:\Users\hpaid\Pictures\The7.Studio\024A6865.jpg" alt="Traditional Ceremony 1">
+                    <img src="images/events/event-01.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/024A6865.jpg';" alt="Traditional Ceremony 1">
                     <div class="work-overlay"><span>Traditional Ceremony</span></div>
                 </div>
 
                 <div class="recent-work-card portfolio-item" data-category="puberty">
-                    <img src="C:\Users\hpaid\Pictures\The7.Studio\@ (3).JPG" alt="Traditional Ceremony 2">
+                    <img src="images/events/event-02.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/@ (3).JPG';" alt="Traditional Ceremony 2">
                     <div class="work-overlay"><span>Puberty Function</span></div>
                 </div>
 
                 <div class="recent-work-card portfolio-item" data-category="baby">
-                    <img src="C:\Users\hpaid\Pictures\The7.Studio\@ (4).JPG" alt="Baby Shoot 1">
+                    <img src="images/baby/baby-01.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/@ (4).JPG';" alt="Baby Shoot 1">
                     <div class="work-overlay"><span>Baby & Maternity</span></div>
                 </div>
 
                 <div class="recent-work-card portfolio-item" data-category="baby">
-                    <img src="C:\Users\hpaid\Pictures\The7.Studio\a.JPG" alt="Baby Shoot 2">
+                    <img src="images/baby/baby-02.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/a.JPG';" alt="Baby Shoot 2">
                     <div class="work-overlay"><span>Newborn Memories</span></div>
                 </div>
 
                 <div class="recent-work-card portfolio-item" data-category="corporate">
-                    <img src="C:\Users\hpaid\Pictures\The7.Studio\024A8567.JPG" alt="Commercial Shoot 1">
+                    <img src="images/events/commercial-01.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/024A8567.JPG';" alt="Commercial Shoot 1">
                     <div class="work-overlay"><span>Commercial Shoot</span></div>
                 </div>
 
                 <div class="recent-work-card portfolio-item" data-category="corporate">
-                    <img src="C:\Users\hpaid\Pictures\The7.Studio\024A8584.JPG" alt="Commercial Shoot 2">
+                    <img src="images/events/commercial-02.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/024A8584.JPG';" alt="Commercial Shoot 2">
                     <div class="work-overlay"><span>Product & Brand</span></div>
                 </div>
 
                 <div class="recent-work-card portfolio-item" data-category="wedding">
-                    <img src="C:\Users\hpaid\Pictures\The7.Studio\IMG_5224.JPEG" alt="Event Shoot">
+                    <img src="images/events/studio-01.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/IMG_5215.JPEG';" alt="Event Shoot">
                     <div class="work-overlay"><span>Outdoor Session</span></div>
                 </div>
 
                 <div class="recent-work-card portfolio-item" data-category="wedding">
-                    <img src="C:\Users\hpaid\Pictures\The7.Studio\IMG_5227.JPEG" alt="Studio Shoot">
+                    <img src="images/events/studio-02.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/IMG_5217.JPEG';" alt="Studio Shoot">
                     <div class="work-overlay"><span>Studio Portrait</span></div>
                 </div>
 
-                <!-- Video Cards (Folder: videos/) -->
-                <div class="recent-work-card portfolio-item video-item" data-category="video">
-                    <div class="video-card-wrapper" style="position: relative; width: 100%; height: 100%; min-height: 250px; background: #000; border-radius: 12px; overflow: hidden;">
-                        <video src="C:\Users\hpaid\Downloads\70632.mp4" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover; filter: brightness(0.9);"></video>
-                        <div class="video-play-badge" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; background: rgba(230, 198, 135, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; font-size: 1.4rem; box-shadow: 0 0 20px rgba(0,0,0,0.8);">
-                            <i class="fa-solid fa-play" style="margin-left: 3px;"></i>
-                        </div>
-                        <div class="work-overlay"><span>Cinematic Cameraman Reel</span></div>
-                    </div>
+                <!-- Gallery Photos from repository assets -->
+                <div class="recent-work-card portfolio-item" data-category="prewedding">
+                    <img src="images/prewedding/prewedding-01.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/024A2100.jpg';" alt="Pre-Wedding B&W">
+                    <div class="work-overlay"><span>Monochrome Love</span></div>
                 </div>
 
+                <div class="recent-work-card portfolio-item" data-category="wedding">
+                    <img src="images/wedding/wedding-05.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/024A2307.jpg';" alt="Pre-Wedding Outdoor">
+                    <div class="work-overlay"><span>Outdoor Romance</span></div>
+                </div>
+
+                <div class="recent-work-card portfolio-item" data-category="prewedding">
+                    <img src="images/prewedding/prewedding-02.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/024A2429.jpg';" alt="Pre-Wedding Couple">
+                    <div class="work-overlay"><span>Golden Hour Couple</span></div>
+                </div>
+
+                <div class="recent-work-card portfolio-item" data-category="puberty">
+                    <img src="images/events/event-03.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/IMG-20260810-WA0019.jpg';" alt="Traditional Event">
+                    <div class="work-overlay"><span>Traditional Elegance</span></div>
+                </div>
+
+                <div class="recent-work-card portfolio-item" data-category="wedding">
+                    <img src="images/wedding/wedding-06.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/IMG-20260810-WA0023.jpg';" alt="Couple Outdoor">
+                    <div class="work-overlay"><span>Couple Under Trees</span></div>
+                </div>
+
+                <div class="recent-work-card portfolio-item" data-category="puberty">
+                    <img src="images/events/event-04.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/IMG-20260810-WA0026.jpg';" alt="Traditional Ceremony">
+                    <div class="work-overlay"><span>Sacred Moment</span></div>
+                </div>
+
+                <div class="recent-work-card portfolio-item" data-category="puberty">
+                    <img src="images/events/event-05.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/IMG-20260810-WA0029.jpg';" alt="Traditional Event">
+                    <div class="work-overlay"><span>Family Celebration</span></div>
+                </div>
+
+                <div class="recent-work-card portfolio-item" data-category="wedding">
+                    <img src="images/wedding/wedding-07.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/IMG-20260810-WA0034.jpg';" alt="Couple Portrait">
+                    <div class="work-overlay"><span>Village Portrait</span></div>
+                </div>
+
+                <div class="recent-work-card portfolio-item" data-category="maternity">
+                    <img src="images/maternity/maternity-01.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/IMG-20260810-WA0035.jpg';" alt="Pre-Wedding Village">
+                    <div class="work-overlay"><span>Rustic Pre-Wedding</span></div>
+                </div>
+
+                <div class="recent-work-card portfolio-item" data-category="wedding">
+                    <img src="images/wedding/wedding-08.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/IMG-20260810-WA0036.jpg';" alt="Couple Session">
+                    <div class="work-overlay"><span>Nature Session</span></div>
+                </div>
+
+                <div class="recent-work-card portfolio-item" data-category="wedding">
+                    <img src="images/wedding/wedding-09.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/IMG-20260810-WA0037.jpg';" alt="Couple Love">
+                    <div class="work-overlay"><span>Love in Nature</span></div>
+                </div>
+
+                <div class="recent-work-card portfolio-item" data-category="wedding">
+                    <img src="images/wedding/wedding-10.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/IMG-20260810-WA0039.jpg';" alt="Couple Portrait">
+                    <div class="work-overlay"><span>Together Forever</span></div>
+                </div>
+
+                <div class="recent-work-card portfolio-item" data-category="wedding">
+                    <img src="images/events/studio-01.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/IMG_5215.JPEG';" alt="Event Photography">
+                    <div class="work-overlay"><span>Event Coverage</span></div>
+                </div>
+
+                <div class="recent-work-card portfolio-item" data-category="wedding">
+                    <img src="images/events/studio-02.jpg" onerror="this.onerror=null; this.src='videos/The7.Studio/IMG_5217.JPEG';" alt="Event Photography">
+                    <div class="work-overlay"><span>Grand Celebration</span></div>
+                </div>
 
             </div>
         </div>
@@ -168,7 +216,7 @@
                     <div class="luxury-promo-banner">
                         <div class="luxury-promo-content">
                             <span class="luxury-gift-icon">🎁</span>
-                            <span class="luxury-promo-text">FREE Pre-Wedding Shoot with Every Event!</span>
+                            <span class="luxury-promo-text">FREE Pre-Wedding Shoot with Every Wedding Event!</span>
                         </div>
                         <div class="luxury-gold-line"></div>
                     </div>
@@ -203,8 +251,8 @@
 
     <!-- Global Floating Action Suite -->
     <div class="floating-actions-left">
-        <a href="https://wa.me/919790301168?text=Hi%20The7Studio,%20I'd%20like%20to%20inquire%20about%20your%20photography%20services." 
-           target="_blank" class="floating-whatsapp-btn" title="Chat on WhatsApp">
+        <a href="https://wa.me/919790301168?text=Hi%20The7Studio,%20I'd%20like%20to%20inquire%20about%20your%20photography%20services."
+            target="_blank" class="floating-whatsapp-btn" title="Chat on WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
         <a href="tel:+919790301168" class="floating-phone-btn" title="Call Us Now">

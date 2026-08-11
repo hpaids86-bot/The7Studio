@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | The7Studio - Memorable Events</title>
     <meta name="description" content="Explore photography & videography services by The7Studio in Tiruppur.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <link rel="shortcut icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/logo.svg">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -36,6 +40,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="booking.html">Booking</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -50,7 +55,16 @@
     <section class="page-banner">
         <div class="container">
             <h1>Our Photography Services</h1>
-            <p>Our Professional Offerings</p>
+            <p>OUR PROFESSIONAL OFFERINGS</p>
+            <div style="margin-top: 15px;">
+                <div class="luxury-promo-banner">
+                    <div class="luxury-promo-content">
+                        <span class="luxury-gift-icon">🎁</span>
+                        <span class="luxury-promo-text">FREE Pre-Wedding Shoot with Every Wedding Event!</span>
+                    </div>
+                    <div class="luxury-gold-line"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -107,13 +121,15 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+
+
+    <!-- FOOTER & MAP -->
     <footer>
         <div class="footer-container">
             <div>
                 <h2>The7Studio</h2>
                 <p>Memorable Events</p>
-                <p style="color: var(--accent-gold); font-weight: 600;">🎁 FREE Pre-Wedding Shoot with Every Event!</p>
+                <p style="color: var(--accent-gold); font-weight: 600;">🎁 FREE Pre-Wedding Shoot with Every Wedding Event!</p>
             </div>
             <div>
                 <h3>Contact</h3>
@@ -128,9 +144,28 @@
                 <p><a href="https://wa.me/919790301168" target="_blank">WhatsApp</a></p>
             </div>
         </div>
-        <hr>
+
+
+        <hr style="margin-top: 30px;">
         <p style="text-align:center;padding:20px;">© 2026 The7Studio. All Rights Reserved.</p>
     </footer>
+
+    <!-- Global Floating Action Suite -->
+    <div class="floating-actions-left">
+        <a href="https://wa.me/919790301168?text=Hi%20The7Studio,%20I'd%20like%20to%20inquire%20about%20your%20photography%20services." 
+           target="_blank" class="floating-whatsapp-btn" title="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <div class="floating-actions-right">
+        <a href="tel:+919790301168" class="floating-action-btn" title="Call Us">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <button id="back-to-top" class="floating-action-btn" title="Back to Top" style="display: none;">
+            <i class="fa-solid fa-chevron-up"></i>
+        </button>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
