@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The7Studio | Memorable Events - Photography & Cinematography in Tiruppur</title>
+
+    <meta name="description"
+        content="The7Studio - Wedding Photography, Cinematography, Baby Shoot, Maternity, Pre-Wedding Shoot, Fashion and Event Coverage in Tiruppur, Tamil Nadu.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <link rel="shortcut icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/logo.svg">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= CINEMATIC INTRO OVERLAY ================= -->
+    <div id="intro-overlay" class="intro-overlay">
+        <!-- Step 4: Camera Lens Aperture Mechanism -->
+        <div id="camera-aperture" class="camera-aperture">
+            <svg viewBox="0 0 500 500" class="aperture-svg">
+                <defs>
+                    <linearGradient id="blade-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#1e2230" />
+                        <stop offset="100%" stop-color="#090b0e" />
+                    </linearGradient>
+                    <linearGradient id="gold-edge" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#E3C98A" />
+                        <stop offset="100%" stop-color="#C8A96B" />
+                    </linearGradient>
+                </defs>
+                <g class="aperture-blades-group" id="aperture-blades-group">
+                    <polygon points="250,250 360,110 460,170 350,300" fill="url(#blade-dark)" stroke="url(#gold-edge)"
+                        stroke-width="2" />
+                    <polygon points="250,250 390,140 440,260 310,360" fill="url(#blade-dark)" stroke="url(#gold-edge)"
+                        stroke-width="2" />
+                    <polygon points="250,250 360,340 300,450 190,360" fill="url(#blade-dark)" stroke="url(#gold-edge)"
+                        stroke-width="2" />
+                    <polygon points="250,250 260,400 150,440 110,310" fill="url(#blade-dark)" stroke="url(#gold-edge)"
+                        stroke-width="2" />
+                    <polygon points="250,250 140,360 50,300 150,190" fill="url(#blade-dark)" stroke="url(#gold-edge)"
+                        stroke-width="2" />
+                    <polygon points="250,250 110,260 60,140 190,100" fill="url(#blade-dark)" stroke="url(#gold-edge)"
+                        stroke-width="2" />
+                    <polygon points="250,250 140,160 200,50 310,140" fill="url(#blade-dark)" stroke="url(#gold-edge)"
+                        stroke-width="2" />
+                    <polygon points="250,250 240,100 350,60 390,190" fill="url(#blade-dark)" stroke="url(#gold-edge)"
+                        stroke-width="2" />
+                </g>
+                <circle cx="250" cy="250" r="235" fill="none" stroke="url(#gold-edge)" stroke-width="4" opacity="0.8" />
+                <circle cx="250" cy="250" r="242" fill="none" stroke="#C8A96B" stroke-width="1.5" opacity="0.4"
+                    stroke-dasharray="10,6" />
+            </svg>
+        </div>
+
+        <!-- Step 2 & 3: The7Studio Logo & Gold Light Sweep -->
+        <div id="intro-logo-box" class="intro-logo-box">
+            <div class="intro-logo-mark">
+                <img src="images/logo.svg" alt="The7Studio Logo">
+            </div>
+            <div class="intro-logo-text">
+                <h2>The<span>7</span>Studio</h2>
+                <p class="intro-tagline">MEMORABLE MOMENT</p>
+            </div>
+            <div id="gold-light-sweep" class="gold-light-sweep"></div>
+        </div>
+
+        <!-- Step 5: Camera Strobe Flash Overlay -->
+        <div id="camera-flash" class="camera-flash"></div>
+    </div>
+
+
+
+    <!-- ================= NAVBAR ================= -->
+    <header id="main-header" class="intro-hidden-nav">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="The7Studio Logo">
+                <div>
+                    <h2>The7Studio</h2>
+                    <span>Memorable Moment</span>
+                </div>
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Navigation Links & Action Button Container -->
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero" id="hero-section" style="background-color: var(--bg-primary);">
+        <!-- Background Logo Watermark -->
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('images/logo.svg') no-repeat center center; background-size: contain; opacity: 0.15; z-index: 1;">
+        </div>
+
+        <div class="hero-content intro-hidden-hero" id="hero-content"
+            style="max-width: 1000px; margin: 0 auto; position: relative; z-index: 2;">
+
+
+
+            <h4>THE7STUDIO</h4>
+            <h1>Capturing Your <span>Memorable Moments</span></h1>
+
+            <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 750px; margin: 0 auto 2rem;">
+                Wedding Shoot • Baby Shower • Maternity • College Events • Content Creation
+            </p>
+            <h3> • Pre-Wedding & Post Wedding-Free for All Event</h3>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </section>
+
+
+
+    <!-- ================= RECENTLY WORKING PICTURES (LATEST PHOTOSHOOTS) ================= -->
+    <section class="recent-works" style="background: var(--bg-secondary); padding: 5rem 5%;">
+        <div class="container" style="padding: 0;">
+            <h2>Recent Work's</h2>
+            <p
+                style="text-align: center; color: var(--accent-gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 40px;">
+                Our Latest Traditional Pre-Wedding & Event Photography in Tiruppur
+            </p>
+
+            <div class="recent-works-grid">
+                <div class="recent-work-card">
+                    <img src="../../images/wedding/wedding-03.jpg" onerror="this.onerror=null; this.src='024A6835.jpg';" alt="Recent Work 1">
+                </div>
+
+                <div class="recent-work-card">
+                    <img src="../../images/wedding/wedding-01.jpg" onerror="this.onerror=null; this.src='024A6670.jpg';" alt="Recent Work 2">
+                </div>
+
+                <div class="recent-work-card">
+                    <img src="../../images/wedding/wedding-02.jpg" onerror="this.onerror=null; this.src='024A6805.jpg';" alt="Recent Work 3">
+                </div>
+
+                <div class="recent-work-card">
+                    <img src="../../images/events/event-01.jpg" onerror="this.onerror=null; this.src='024A6865.jpg';" alt="Recent Work 4">
+
+                </div>
+
+                <div class="recent-work-card">
+                    <img src="../../images/events/event-02.jpg" onerror="this.onerror=null; this.src='@ (3).JPG';" alt="Recent Work 5">
+                </div>
+
+                <div class="recent-work-card">
+                    <img src="../../images/baby/baby-01.jpg" onerror="this.onerror=null; this.src='@ (4).JPG';" alt="Recent Work 6">
+                </div>
+
+                <div class="recent-work-card">
+                    <img src="../../images/baby/baby-02.jpg" onerror="this.onerror=null; this.src='a.JPG';" alt="Recent Work 7">
+                </div>
+
+                <div class="recent-work-card">
+                    <img src="../../images/events/commercial-01.jpg" onerror="this.onerror=null; this.src='024A8567.JPG';" alt="Recent Work 8">
+                </div>
+
+                <div class="recent-work-card">
+                    <img src="../../images/events/commercial-02.jpg" onerror="this.onerror=null; this.src='024A8584.JPG';" alt="Recent Work 9">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT OVERVIEW ================= -->
+    <section class="about">
+        <div class="container" style="text-align: center; padding: 0;">
+            <h2>About The7Studio</h2>
+            <p style="max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem;">
+                Welcome to <strong>The7Studio</strong> located in Tiruppur, Tamil Nadu. We believe every moment tells a
+                story.
+                Whether it's a grand wedding, birthday, maternity session, baby shoot, or commercial project,
+                we capture emotions that last forever.
+            </p>
+            <a href="about.html" class="btn-outline">Read Studio Story</a>
+        </div>
+    </section>
+
+    <!-- ================= SERVICES SUMMARY ================= -->
+    <section class="services" style="background: var(--bg-secondary);">
+        <div class="container" style="padding: 0;">
+            <h2>Our Services</h2>
+            <div class="service-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                <div
+                    style="background: var(--bg-card); padding: 30px; border-radius: 8px; border: 1px solid var(--border-gold); text-align: center;">
+                    <i class="fa-solid fa-camera"
+                        style="font-size: 2.2rem; color: var(--accent-gold); margin-bottom: 15px;"></i>
+                    <h3>Wedding Photography</h3>
+                    <p>Capturing rituals, emotions, and timeless moments + <strong>FREE Pre-Wedding Shoot!</strong></p>
+                </div>
+
+                <div
+                    style="background: var(--bg-card); padding: 30px; border-radius: 8px; border: 1px solid var(--border-gold); text-align: center;">
+                    <i class="fa-solid fa-video"
+                        style="font-size: 2.2rem; color: var(--accent-gold); margin-bottom: 15px;"></i>
+                    <h3>Cinematography</h3>
+                    <p>4K Cinematic films, trailers, and storytelling videos.</p>
+                </div>
+
+                <div
+                    style="background: var(--bg-card); padding: 30px; border-radius: 8px; border: 1px solid var(--border-gold); text-align: center;">
+                    <i class="fa-solid fa-heart"
+                        style="font-size: 2.2rem; color: var(--accent-gold); margin-bottom: 15px;"></i>
+                    <h3>Free Pre-Wedding Shoot</h3>
+                    <p>Included FREE with all event photography packages!</p>
+                </div>
+
+                <div
+                    style="background: var(--bg-card); padding: 30px; border-radius: 8px; border: 1px solid var(--border-gold); text-align: center;">
+                    <i class="fa-solid fa-baby"
+                        style="font-size: 2.2rem; color: var(--accent-gold); margin-bottom: 15px;"></i>
+                    <h3>Baby Shoot</h3>
+                    <p>Creative and safe themes for babies & toddlers.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 35px;">
+                <a href="services.html" class="btn">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE US STATS ================= -->
+    <section class="why">
+        <div class="container" style="text-align: center; padding: 0;">
+            <h2>Why Choose Us?</h2>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 40px;">
+                <div>
+                    <h3 style="font-size: 3rem; color: var(--accent-gold);">500+</h3>
+                    <p>Events Covered</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 3rem; color: var(--accent-gold);">100%</h3>
+                    <p>Customer Satisfaction</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 3rem; color: var(--accent-gold);">FREE</h3>
+                    <p>Pre-Wedding Bonus</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 3rem; color: var(--accent-gold);">Creative</h3>
+                    <p>Visual Storytelling</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CALL TO ACTION ================= -->
+    <section class="cta" style="text-align: center; background: var(--bg-secondary);">
+        <div class="container">
+            <h2>Let's Capture Your Story</h2>
+            <p style="margin-bottom: 25px; font-size: 1.1rem;">Book your event today and get your <strong>FREE
+                    Pre-Wedding Shoot</strong> with The7Studio.</p>
+            <div class="hero-buttons"
+                style="display: flex; justify-content: center; gap: 20px; margin-bottom: 40px; flex-wrap: wrap;">
+                <a href="booking.html" class="btn"><i class="fa-solid fa-calendar-check"></i> Book Event</a>
+                <a href="contact.html" class="btn-outline">Contact Us</a>
+            </div>
+
+            <!-- INSTAGRAM REEL HERO SHOWCASE -->
+            <div class="video-container"
+                style="max-width: 420px; margin: 0 auto; border-radius: 16px; overflow: hidden; border: 2px solid var(--accent-gold); box-shadow: 0 15px 40px rgba(0,0,0,0.8); background: #000;">
+                <iframe src="https://www.instagram.com/reel/DbIsOhbSNiO/embed" width="100%" height="560" frameborder="0"
+                    scrolling="no" allowtransparency="true" style="border:none; overflow:hidden;"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h2>The7Studio</h2>
+                <p>Memorable Events</p>
+                <p style="color: var(--accent-gold); font-weight: 600; margin-top: 10px;">🎁 FREE Pre-Wedding Shoot with
+                    Every Event!</p>
+            </div>
+            <div>
+                <h3>Contact Info</h3>
+                <p>Balamurugan Nagar, 3rd Street, Kumar Nagar, Valayankadu South, Tiruppur, Tamil Nadu - 641603</p>
+                <p>📞 <a href="tel:+919790301168">+91 97903 01168</a></p>
+                <p>✉ <a href="mailto:the7studioo@gmail.com">the7studioo@gmail.com</a></p>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <p><a href="https://www.instagram.com/the_7_studio_" target="_blank"><i
+                            class="fa-brands fa-instagram"></i> Instagram</a></p>
+                <p><a href="https://youtube.com/@akyt3501" target="_blank"><i class="fa-brands fa-youtube"></i>
+                        YouTube</a></p>
+                <p><a href="https://wa.me/919790301168" target="_blank"><i class="fa-brands fa-whatsapp"></i>
+                        WhatsApp</a></p>
+            </div>
+        </div>
+        <hr>
+        <p style="text-align:center;padding:20px;">© 2026 The7Studio. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

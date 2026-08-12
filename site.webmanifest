@@ -1,0 +1,16 @@
+{
+  "name": "The7Studio | Photography & Cinematography",
+  "short_name": "The7Studio",
+  "description": "Professional photography and cinematography studio in Tiruppur, Tamil Nadu.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#C8A96B",
+  "icons": [
+    {
+      "src": "/images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

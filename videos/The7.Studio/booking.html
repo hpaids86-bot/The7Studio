@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Shoot | The7Studio - Memorable Events</title>
+    <meta name="description" content="Book photography and videography session with The7Studio Tiruppur.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <link rel="shortcut icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/logo.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="The7Studio Logo">
+                <div>
+                    <h2>The7Studio</h2>
+                    <span>Memorable Events</span>
+                </div>
+            </a>
+            <!-- Mobile Menu Toggle Button -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Navigation Links & Action Button Container -->
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html" class="active">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Book Your Session</h1>
+            <h2>Create Your Memories To Be A Emotion</h2>
+
+        </div>
+    </section>
+
+    <!-- BOOKING FORM SECTION -->
+    <section class="booking-page">
+        <div class="container" style="max-width: 850px;">
+
+
+            <form onsubmit="handleWhatsAppFormSubmission(event, 'booking')"
+                style="background: var(--bg-card); padding: 40px; border-radius: 8px; border: 1px solid var(--border-gold);">
+                <div class="responsive-grid">
+                    <div>
+                        <label style="display:block; margin-bottom: 8px; color: var(--accent-gold);">Your Name</label>
+                        <input type="text" name="name" placeholder="Enter Full Name" required
+                             style="width:100%; padding: 12px; background: var(--bg-primary); border: 1px solid var(--border-light); color: var(--color-text); border-radius: 4px;">
+                    </div>
+                    <div>
+                        <label style="display:block; margin-bottom: 8px; color: var(--accent-gold);">Phone
+                            Number</label>
+                        <input type="tel" name="phone" placeholder="+91 97903 01168" required
+                            style="width:100%; padding: 12px; background: var(--bg-primary); border: 1px solid var(--border-light); color: var(--color-text); border-radius: 4px;">
+                    </div>
+                </div>
+
+
+                <div class="responsive-grid">
+                    <div>
+                        <label style="display:block; margin-bottom: 8px; color: var(--accent-gold);">Services</label>
+                        <select name="services"
+                            style="width:100%; padding: 12px; background: var(--bg-primary); border: 1px solid var(--border-light); color: var(--color-text); border-radius: 4px;">
+                            <option>Traditional Photography</option>
+                            <option>Traditional Video</option>
+                            <option>Candid Photography</option>
+                            <option>Candid Video</option>
+                            <option>Drone Shoot</option>
+                            <option>360* Degree Video Wedding</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="display:block; margin-bottom: 8px; color: var(--accent-gold);">Event
+                            Type</label>
+                        <select name="service"
+                            style="width:100%; padding: 12px; background: var(--bg-primary); border: 1px solid var(--border-light); color: var(--color-text); border-radius: 4px;">
+                            <option>Wedding Shoots </option>
+                            <option>360* Degree Video Wedding</option>
+                            <option>Baby Shoots</option>
+                            <option>Maternity Shoot</option>
+                            <option>Birthday Shoot</option>
+                            <option>Colloge Events</option>
+                            <option>Content Creation</option>
+                            <option>Product Shoots</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="display:block; margin-bottom: 8px; color: var(--accent-gold);">Event Date</label>
+                        <input type="date" name="date" required
+                            style="width:100%; padding: 12px; background: var(--bg-primary); border: 1px solid var(--border-light); color: var(--color-text); border-radius: 4px;">
+                    </div>
+                </div>
+
+
+
+                <div style="margin-bottom: 25px;">
+                    <label style="display:block; margin-bottom: 8px; color: var(--accent-gold);">Event Location /
+                        Special Requests</label>
+                    <textarea name="details" rows="4" placeholder="Mention venue location in Tiruppur or Tamil Nadu..."
+                        style="width:100%; padding: 12px; background: var(--bg-primary); border: 1px solid var(--border-light); color: var(--color-text); border-radius: 4px;"></textarea>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%;"><i class="fa-solid fa-paper-plane"></i> Submit
+                    Booking</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h2>The7Studio</h2>
+                <p>Memorable Events</p>
+                <p style="color: var(--accent-gold); font-weight: 600;">🎁 FREE Pre-Wedding Shoot with Every Wedding Event!</p>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Balamurugan Nagar, 3rd Street, Kumar Nagar, Valayankadu South, Tiruppur, Tamil Nadu - 641603</p>
+                <p>📞 +91 97903 01168</p>
+                <p>✉ the7studioo@gmail.com</p>
+            </div>
+            <div>
+                <h3>Follow Us</h3>
+                <p><a href="https://www.instagram.com/the_7_studio_" target="_blank">Instagram</a></p>
+                <p><a href="https://youtube.com/@akyt3501" target="_blank">YouTube</a></p>
+                <p><a href="https://wa.me/919790301168" target="_blank">WhatsApp</a></p>
+            </div>
+        </div>
+        <hr>
+        <p style="text-align:center;padding:20px;">© 2026 The7Studio. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

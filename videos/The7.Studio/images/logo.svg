@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" fill="none">
+    <defs>
+        <!-- Metallic Silver Gradient -->
+        <linearGradient id="silver-metal" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFFFFF" />
+            <stop offset="25%" stop-color="#E2E5EC" />
+            <stop offset="50%" stop-color="#A2A8B6" />
+            <stop offset="75%" stop-color="#E8ECF5" />
+            <stop offset="100%" stop-color="#848A96" />
+        </linearGradient>
+
+        <!-- Subtle Gold Metallic Accent Gradient -->
+        <linearGradient id="gold-metal" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFF3D1" />
+            <stop offset="50%" stop-color="#C8A96B" />
+            <stop offset="100%" stop-color="#B09050" />
+        </linearGradient>
+
+        <!-- Metallic Bevel Drop Shadow Filter -->
+        <filter id="metallic-glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.8" />
+            <feDropShadow dx="0" dy="0" stdDeviation="15" flood-color="#C8A96B" flood-opacity="0.25" />
+        </filter>
+    </defs>
+
+    <style>
+        .brand-text {
+            font-family: 'Cormorant Garamond', 'Cinzel', 'Georgia', serif;
+            fill: url(#silver-metal);
+            letter-spacing: 16px;
+            font-weight: 700;
+            filter: url(#metallic-glow);
+        }
+
+        .camera-path {
+            stroke: url(#silver-metal);
+            stroke-width: 14;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+            filter: url(#metallic-glow);
+        }
+
+        .lens-ring {
+            stroke: url(#silver-metal);
+            stroke-width: 10;
+            fill: none;
+            filter: url(#metallic-glow);
+        }
+
+        .seven-numeral {
+            fill: url(#silver-metal);
+            filter: url(#metallic-glow);
+        }
+    </style>
+
+    <!-- THE -->
+    <text x="408" y="160" text-anchor="middle" class="brand-text" font-size="72">THE</text>
+
+    <!-- CAMERA OUTER FRAME & TOP NOTCH -->
+    <!-- Top shutter notch -->
+    <path d="M 270 230 C 285 200, 310 190, 335 190 L 365 190 C 390 190, 405 200, 420 230" class="camera-path" />
+
+    <!-- Main Camera Outer Body Contour -->
+    <path d="M 330 230 L 210 230 C 170 230, 150 250, 150 290 L 150 450 C 150 490, 170 510, 210 510 L 270 510" class="camera-path" />
+    <path d="M 470 230 L 590 230 C 630 230, 650 250, 650 290 L 650 450 C 650 490, 630 510, 590 510 L 520 510" class="camera-path" />
+
+    <!-- INTEGRATED 7 NUMERAL MARK -->
+    <g class="seven-numeral">
+        <!-- Top horizontal bar -->
+        <path d="M 285 230 C 310 215, 460 215, 490 230 L 465 295 C 440 280, 340 280, 320 295 Z" />
+        <!-- Diagonal sweeping stem -->
+        <path d="M 490 230 C 440 330, 375 440, 335 540 L 280 540 C 320 440, 395 330, 440 280 Z" />
+    </g>
+
+    <!-- LENS & APERTURE SWIRL RINGS -->
+    <circle cx="510" cy="370" r="75" class="lens-ring" stroke-width="12" />
+    <circle cx="510" cy="370" r="52" class="lens-ring" stroke-width="8" />
+
+    <!-- Inner Aperture Crescent Flare -->
+    <path d="M 460 370 A 50 50 0 0 1 555 335" class="camera-path" stroke-width="8" stroke-linecap="round" />
+    <path d="M 475 395 A 35 35 0 0 0 540 380" class="camera-path" stroke-width="6" stroke-linecap="round" />
+
+    <!-- STUDIO -->
+    <text x="408" y="650" text-anchor="middle" class="brand-text" font-size="82">STUDIO</text>
+</svg>
