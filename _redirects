@@ -1,5 +1,3 @@
-# Domain redirects and clean URLs
-https://www.the7studio.in/* https://the7studio.in/:splat 301!
 /index /index.html 200
 /about /about.html 200
 /services /services.html 200
