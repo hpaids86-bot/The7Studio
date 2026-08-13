@@ -535,6 +535,159 @@ function initServiceAccordion() {
 }
 
 /* ==========================================================================
+   REAL BACKEND BOOKING FORM SUBMISSION (POST /api/booking)
+   ========================================================================== */
+async function handleBookingFormSubmission(event) {
+  event.preventDefault();
+  const form = event.target;
+  const submitBtn = document.getElementById('booking-submit-btn') || form.querySelector('button[type="submit"]');
+  const responseBox = document.getElementById('booking-response');
+
+  if (!submitBtn) return;
+
+  const originalBtnHtml = submitBtn.innerHTML;
+
+  // Extract form input values
+  const name = (form.name ? form.name.value : '').trim();
+  const phone = (form.phone ? form.phone.value : '').trim();
+  const email = (form.email ? form.email.value : '').trim();
+  const event_type = form.event_type ? form.event_type.value : '';
+  const event_date = form.event_date ? form.event_date.value : '';
+  const preferred_time = form.preferred_time ? form.preferred_time.value : '';
+  const location = (form.location ? form.location.value : '').trim();
+  const hours = form.hours ? form.hours.value : '';
+  const budget = form.budget ? form.budget.value : '';
+  const message = (form.message ? form.message.value : '').trim();
+
+  // Gather service checkboxes
+  const serviceCheckboxes = form.querySelectorAll('input[name="services"]:checked');
+  const services = Array.from(serviceCheckboxes).map(cb => cb.value);
+
+  // Client-side validation
+  const errors = [];
+  if (!name || name.length < 2) {
+    errors.push('Please enter your full name.');
+  }
+
+  const cleanedPhone = phone.replace(/[^0-9+]/g, '');
+  if (!phone || cleanedPhone.length < 10) {
+    errors.push('Please enter a valid phone number (at least 10 digits).');
+  }
+
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errors.push('Please enter a valid email address.');
+  }
+
+  if (!event_type) {
+    errors.push('Please select an event type.');
+  }
+
+  if (!event_date) {
+    errors.push('Please select your event date.');
+  }
+
+  if (errors.length > 0) {
+    if (responseBox) {
+      responseBox.style.display = 'block';
+      responseBox.innerHTML = `
+        <div style="background: rgba(255, 77, 77, 0.1); border: 1px solid #ff4d4d; border-radius: 8px; padding: 1rem; color: #ff8080; font-size: 0.85rem;">
+          <i class="fa-solid fa-triangle-exclamation" style="margin-right:0.4rem;"></i>
+          ${errors.join('<br>')}
+        </div>
+      `;
+    } else {
+      alert(errors.join('\n'));
+    }
+    return;
+  }
+
+  // Clear previous response box
+  if (responseBox) {
+    responseBox.style.display = 'none';
+    responseBox.innerHTML = '';
+  }
+
+  // Set loading state
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting Request...';
+
+  const payload = {
+    name,
+    phone,
+    email,
+    event_type,
+    event_date,
+    preferred_time,
+    location,
+    package: services.length ? services.join(', ') : budget,
+    hours,
+    budget,
+    message
+  };
+
+  try {
+    const res = await fetch('/api/booking', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await res.json();
+
+    if (res.ok && data.success) {
+      if (responseBox) {
+        responseBox.style.display = 'block';
+        responseBox.innerHTML = `
+          <div style="background: rgba(200, 169, 107, 0.12); border: 1px solid var(--gold); border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem; color: #F5F1E8;">
+            <div style="display:flex; align-items:center; gap:0.6rem; color: var(--gold); font-weight:600; font-size: 1rem; margin-bottom: 0.5rem;">
+              <i class="fa-solid fa-circle-check" style="font-size:1.3rem;"></i>
+              <span>Booking Request Received Successfully!</span>
+            </div>
+            <p style="font-size:0.88rem; color: var(--text-secondary); margin:0; line-height: 1.6;">
+              Our team will contact you shortly to confirm availability.
+            </p>
+            <div style="margin-top:1rem; text-align:center;">
+              <a href="https://wa.me/919790301168?text=${encodeURIComponent('Hi The7Studio, I just submitted a booking request for ' + event_type + ' on ' + event_date + '.')}"
+                 target="_blank" rel="noopener"
+                 style="display:inline-flex; align-items:center; gap:0.5rem; font-size:0.8rem; color:#25D366; border:1px solid #25D366; background: rgba(37,211,102,0.08); padding:0.5rem 1rem; border-radius:4px; text-decoration:none; font-weight:500;">
+                <i class="fa-brands fa-whatsapp" style="font-size:1rem;"></i> Chat directly on WhatsApp
+              </a>
+            </div>
+          </div>
+        `;
+      }
+      form.reset();
+    } else {
+      if (responseBox) {
+        responseBox.style.display = 'block';
+        responseBox.innerHTML = `
+          <div style="background: rgba(255, 77, 77, 0.1); border: 1px solid #ff4d4d; border-radius: 8px; padding: 1rem; color: #ff8080; font-size: 0.85rem;">
+            <i class="fa-solid fa-triangle-exclamation" style="margin-right:0.4rem;"></i>
+            ${data.error || 'Submission failed. Please try again or reach out to us via WhatsApp.'}
+          </div>
+        `;
+      }
+    }
+  } catch (err) {
+    console.error('[Booking Submit Error]', err);
+    if (responseBox) {
+      responseBox.style.display = 'block';
+      responseBox.innerHTML = `
+        <div style="background: rgba(255, 77, 77, 0.1); border: 1px solid #ff4d4d; border-radius: 8px; padding: 1rem; color: #ff8080; font-size: 0.85rem;">
+          <i class="fa-solid fa-triangle-exclamation" style="margin-right:0.4rem;"></i>
+          Network or server error occurred. Please check your internet connection or contact us directly on WhatsApp (+91 97903 01168).
+        </div>
+      `;
+    }
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalBtnHtml;
+  }
+}
+
+/* ==========================================================================
    WHATSAPP FORM SUBMISSION (Preserved)
    ========================================================================== */
 function handleWhatsAppFormSubmission(event, formType) {
