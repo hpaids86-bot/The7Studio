@@ -73,7 +73,7 @@ export async function onRequestPost(context) {
     const location = (body.location || '').toString().trim();
     const package_info = Array.isArray(body.package || body.services) 
       ? (body.package || body.services).join(', ') 
-      : (body.package || body.services || body.budget || '').toString().trim();
+      : (body.package || body.services || '').toString().trim();
     const hours = (body.hours || body.duration || '').toString().trim();
     const message = (body.message || body.details || '').toString().trim();
 

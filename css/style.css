@@ -610,8 +610,9 @@ body::before {
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 600px;
+  aspect-ratio: 16 / 9;
+  max-height: 85vh;
+  min-height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -623,13 +624,17 @@ body::before {
   position: absolute;
   inset: 0;
   z-index: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-bg img {
   width: 100%;
   height: 100%;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center;
+  display: block;
   transform: scale(1.06);
   transition: transform 8s ease-out;
   filter: brightness(0.45);
@@ -2092,16 +2097,32 @@ footer {
 
 .footer-social-row {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.8rem;
 }
 
 .footer-social-row a {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  color: var(--gold);
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.footer-social-row a:hover { color: var(--gold); }
+.footer-social-row a:hover {
+  color: #080808;
+  background: var(--gold);
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(200, 169, 107, 0.3);
+}
 
 /* ─────────────────────────────────────────────────────────
    27. FLOATING ACTIONS
@@ -2235,6 +2256,18 @@ footer {
   .navbar .logo { display: none; }
 
   /* Hero */
+  .hero {
+    aspect-ratio: 16 / 10;
+    min-height: 480px;
+    height: auto;
+    padding: 7.5rem 1.2rem 4rem;
+  }
+  .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
   .hero-title {
     font-size: clamp(2.8rem, 14vw, 5.5rem);
     letter-spacing: -0.01em;
@@ -2254,13 +2287,19 @@ footer {
 
   /* Footer */
   .footer-container { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 5% 2rem; }
-  .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 1rem; }
+  .footer-social-row { justify-content: center; }
 
   /* Forms */
   .form-grid-2 { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    aspect-ratio: 4 / 3;
+    min-height: 440px;
+    padding: 7rem 1rem 3rem;
+  }
   .hero-title { font-size: clamp(2.4rem, 13vw, 4rem); }
   .gallery-grid { columns: 1; }
   .hero-ctas { flex-direction: column; align-items: stretch; }

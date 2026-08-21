@@ -556,7 +556,6 @@ async function handleBookingFormSubmission(event) {
   const preferred_time = form.preferred_time ? form.preferred_time.value : '';
   const location = (form.location ? form.location.value : '').trim();
   const hours = form.hours ? form.hours.value : '';
-  const budget = form.budget ? form.budget.value : '';
   const message = (form.message ? form.message.value : '').trim();
 
   // Gather service checkboxes
@@ -619,9 +618,8 @@ async function handleBookingFormSubmission(event) {
     event_date,
     preferred_time,
     location,
-    package: services.length ? services.join(', ') : budget,
+    package: services.length ? services.join(', ') : '',
     hours,
-    budget,
     message
   };
 
